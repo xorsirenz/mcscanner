@@ -20,6 +20,7 @@ def monitor_chat():
 
     while True:
         current_messages = get_response(url)
+
         if current_messages != last_messages:
             for message in current_messages:
                 timestamp = datetime.now().strftime("%H:%M:%S")
@@ -28,4 +29,3 @@ def monitor_chat():
                     file.write(f"[{timestamp}] {message}\n")
                 last_messages = current_messages
         time.sleep(0.3)
-        

@@ -1,6 +1,6 @@
 import sys
 import os
-from src.mcscanner import java
+from src.server_scanner import java
 from src.bluemap_logger import monitor_chat
 
 def banner():
