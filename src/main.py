@@ -18,25 +18,26 @@ def banner():
     menu()
 
 def menu():
-    menu = """
-    mc(server)scanner
-    [1] Server Scanner
-    [2] Bluemap chat logger
-    [Q] Shutdown
-    """
-    print(menu)
+    while True:
+        menu = """
+        mc(server)scanner
+        [1] Server Scanner
+        [2] Bluemap chat logger
+        [Q] Shutdown
+        """
+        print(menu)
 
-    prompt = input(f"[>] ")
-    match (prompt.lower()):
-        case "1" | "scanner":
-            os.system('clear')
-            java()
-        case "2" | "bluemap":
-            monitor_chat()
-        case "q" | "quit":
-            shutdown()
-        case "c" | "clear" | "cls":
-            os.system('clear')
+        prompt = input(f"[>] ")
+        match (prompt.lower()):
+            case "1" | "scanner":
+                os.system('clear')
+                java()
+            case "2" | "bluemap":
+                monitor_chat()
+            case "q" | "quit":
+                shutdown()
+            case "c" | "clear" | "cls":
+                os.system('clear')
 
 def shutdown():
     print("\n[x] mcscanner closed..")
