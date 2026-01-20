@@ -1,6 +1,5 @@
 import requests
 
-
 def java():
     url = 'https://api.mcsrvstat.us/3/'
     platform = 'java'
@@ -9,7 +8,7 @@ def java():
         server = input(f'[*] Server Address: \n[>] ').strip() or '[*] Please enter a server\n [>] '
         print(f"\n{server}")
     except KeyboardInterrupt:
-        exit()
+        return
 
     try:
         r = requests.get(f'{url}{server}')
@@ -45,4 +44,3 @@ def java():
             print(f'[!] Java server not found\n')
     except KeyboardInterrupt:
         exit()
-
