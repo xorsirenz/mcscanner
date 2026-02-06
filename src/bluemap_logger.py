@@ -13,7 +13,7 @@ def get_response(url):
     return chat_messages
 
 def monitor_chat():
-    url = input("[*] markers.json url:\n[>] ")
+    url = input("[*] paste markers.json url:\n[>] ").split('?')[0]
     print("[*] waiting for new messages\n")
     last_messages = get_response(url)
 
